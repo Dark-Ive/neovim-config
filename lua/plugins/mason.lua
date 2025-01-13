@@ -6,6 +6,11 @@ return {
       "williamboman/mason-lspconfig.nvim",
       "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
+    opts = {
+      ui = {
+        border = "rounded",
+      },
+    },
     config = function()
       -- Import mason and related modules
       local mason = require("mason")
@@ -36,6 +41,8 @@ return {
           "emmet_ls",
           "prismals",
           "jsonls",
+          "pylsp",
+          "jdtls",
         },
       })
 

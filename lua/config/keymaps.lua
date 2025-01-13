@@ -46,3 +46,9 @@ vim.api.nvim_set_keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
+
+local util = require("lazyvim.util")
+
+vim.keymap.set("n", "<C-/>", function()
+  util.terminal(nil, { border = "rounded" })
+end, { desc = "Terminal (root dir)" })

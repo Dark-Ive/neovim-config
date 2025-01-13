@@ -20,7 +20,29 @@ vim.cmd([[
 vim.api.nvim_set_hl(0, "Cmdline", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "MsgArea", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
-vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#fabd2f", bg = "NONE" })
 
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*",
+  callback = function()
+    vim.cmd("FormatWrite")
+  end,
+})
+
+vim.opt.clipboard = "unnamedplus"
+
+vim.g.clipboard = {
+  name = "win32yank",
+  copy = {
+    ["+"] = "win32yank.exe -i --crlf",
+    ["*"] = "win32yank.exe -i --crlf",
+  },
+  paste = {
+    ["+"] = "win32yank.exe -o --lf",
+    ["*"] = "win32yank.exe -o --lf",
+  },
+  cache_enabled = 0,
+}
