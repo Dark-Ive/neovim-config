@@ -4,7 +4,17 @@ return {
   dependencies = { "rafamadriz/friendly-snippets" },
   version = "*",
   opts = {
+    signature = {
+      window = {
+        border = "rounded",
+      },
+    },
     completion = {
+      documentation = {
+        window = {
+          border = "rounded",
+        },
+      },
       ghost_text = {
         enabled = false,
       },
