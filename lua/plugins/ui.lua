@@ -16,30 +16,28 @@ return {
         cmdline = {
           enabled = true,
           view = "cmdline",
-          hide = false,
-        },
-        lsp = {
-          progress = {
-            enabled = true,
-          },
-        },
-        presets = {
-          bottom_search = false,
+          hide = true,
         },
         views = {
           cmdline = {
             position = {
-              row = "98%",
+              row = -0.9,
               col = "50%",
             },
             size = {
-              width = 160,
+              width = "100%",
               height = "auto",
             },
-            win_options = {
-              winhighlight = "Normal:Normal, FloatBorder:FloatBorder",
-            },
           },
+        },
+        lsp = {
+          progress = { enabled = true },
+          hover = { enabled = true },
+          signature = { enabled = true },
+        },
+        presets = {
+          bottom_search = true,
+          command_palette = false,
         },
         status = {
           enabled = true,

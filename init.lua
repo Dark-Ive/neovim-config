@@ -23,13 +23,17 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#fabd2f", bg = "NONE" })
 
 vim.opt.cmdheight = 1
-vim.opt.laststatus = 2
+vim.opt.laststatus = 3
 
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = "*",
   callback = function()
     vim.cmd("FormatWrite")
   end,
+})
+
+vim.api.nvim_create_autocmd("VimLeave", {
+  command = "set guicursor=a:ver25",
 })
 
 vim.opt.clipboard = "unnamedplus"
@@ -46,3 +50,9 @@ vim.g.clipboard = {
   },
   cache_enabled = 0,
 }
+
+vim.lsp.handlers["textDocument/signatureHelp"] = function() end
+
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+  trigger_characters = {},
+})

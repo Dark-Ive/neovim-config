@@ -6,7 +6,6 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim", -- Required dependency
       "nvim-telescope/telescope-fzf-native.nvim", -- FZF sorter for Telescope
-      "nvim-telescope/telescope-file-browser.nvim", -- Optional file browser
     },
     build = function()
       require("telescope").setup({
@@ -37,7 +36,6 @@ return {
 
       -- Load the extensions
       require("telescope").load_extension("fzf")
-      require("telescope").load_extension("file_browser")
     end,
   },
 
@@ -45,10 +43,5 @@ return {
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     build = "make",
-  },
-
-  -- Optional: File Browser Extension
-  {
-    "nvim-telescope/telescope-file-browser.nvim",
   },
 }
