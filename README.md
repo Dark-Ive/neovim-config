@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Neovim Configuration
 
 ![Static Badge](https://img.shields.io/badge/Linux-yellow) ![Static Badge](https://img.shields.io/badge/Windows-blue) ![Static Badge](https://img.shields.io/badge/lazyvim-lightred) ![Static Badge](https://img.shields.io/badge/neovim-0.9%2B-lightblue)
@@ -66,3 +67,9 @@ To change the colorscheme, edit the `colorscheme.lua` and also change these line
    ```
 
 **Note**: Neovim may be slower in WSL compared to a native linux environment.
+=======
+# 💤 LazyVim
+
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+>>>>>>> 76cadba (Initial commit)
