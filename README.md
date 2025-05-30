@@ -40,7 +40,8 @@ To change the colorscheme, edit the `colorscheme.lua` and also change these line
 - **Keybindings**: keymaps are configured mostly for myself, you can change it in `keymaps.lua`.
 
 ## Start screen with Dashboard-nvim
-![image](https://github.com/user-attachments/assets/211af87f-7d6d-4cd1-8760-22af0f65c33f)
+![image](https://github.com/user-attachments/assets/77b422ad-bd6b-49ea-8a0d-e72a5da9abce)
+
 
 ## Fuzzy finding using fzf
 ![neovim-ezgif com-optimize](https://github.com/user-attachments/assets/6c4d52f7-ed06-4f7a-a16b-76e551612674)
